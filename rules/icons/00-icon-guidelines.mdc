@@ -1,0 +1,48 @@
+# Icon Guidelines
+
+## Icon Structure
+
+- Icons should be implemented as Vue components
+- Icons should be SVG-based for scalability
+- Each icon should be placed in the appropriate category directory:
+  - `filled/` for filled icons
+  - `linear/` for outlined/linear icons
+  - `logos/` for logo icons
+- Use the appropriate mixin for each icon type:
+  - `icon-mixin.ts` for regular icons
+  - `logos-mixin.ts` for logo icons
+
+## Naming Conventions
+
+- Use PascalCase for icon component names
+- Include the style as a suffix (e.g., `UserFill`, `ArrowTopRightLinear`)
+- Be descriptive but concise with icon names
+- Group related icons together with consistent naming
+
+## SVG Optimization
+
+- Optimize SVGs before adding them to the library
+- Remove unnecessary attributes and metadata
+- Use consistent viewBox dimensions
+- Ensure icons can be styled with CSS (fill, stroke, etc.)
+
+## Implementation
+
+- Keep icons simple and focused
+- Icons should scale well at different sizes
+- Avoid complex gradients or effects that may not render well
+- Icons should have good contrast at all sizes
+
+## Export Format
+
+- Export icons as Vue components
+- Include TypeScript types for all exports
+- Use named exports for icons
+- Group exports logically in index files
+
+## Documentation
+
+- Document each icon with a clear name and description
+- Showcase icons in a catalog or storybook
+- Include examples of common use cases
+- Document any special considerations for specific icons

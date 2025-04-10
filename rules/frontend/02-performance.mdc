@@ -1,0 +1,40 @@
+# Performance Guidelines
+
+## Component Optimization
+
+- Use `v-show` instead of `v-if` for frequent toggles
+- Use computed properties instead of methods for derived values
+- Use `shallowRef` for large objects that don't need deep reactivity
+- Avoid unnecessary watchers
+- Use functional components for simple, stateless components
+
+## Rendering Optimization
+
+- Use keys properly in v-for loops
+- Avoid expensive operations in computed properties
+- Consider using `v-once` for static content
+- Lazy load components when appropriate
+- Use Suspense for async components
+
+## Async Operations
+
+- Use async/await instead of promises when possible
+- Handle loading and error states for async operations
+- Debounce or throttle event handlers for performance-intensive operations
+- Cancel redundant API calls when appropriate
+
+## Bundle Size
+
+- Lazy load routes
+- Use dynamic imports for large dependencies
+- Be mindful of third-party dependencies
+- Avoid importing entire libraries when only a small portion is needed
+- Use tree-shakable imports
+
+## Asset Optimization
+
+- Optimize images before importing
+- Use appropriate image formats (WebP when possible)
+- Lazy load images and use proper width/height attributes
+- Use SVGs for icons when possible
+- Consider using a CDN for static assets

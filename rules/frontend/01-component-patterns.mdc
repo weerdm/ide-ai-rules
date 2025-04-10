@@ -1,0 +1,48 @@
+# Component Patterns
+
+## Component Structure
+
+- Components should follow the Single Responsibility Principle
+- Larger components should be broken down into smaller components
+- Use props and events for component communication
+- Avoid using the parent-child instance relationships (`$parent` or `$children`)
+- Use slots for content injection when appropriate
+
+## Props
+
+- All props should have type definitions
+- Use default values for optional props
+- Document complex props with comments
+- Validate required props
+- Use camelCase for prop names in the script
+- Use kebab-case for prop names in the template
+
+## Events
+
+- Define emits with proper types
+- Use kebab-case for event names
+- Avoid using the global event bus
+
+## Composables
+
+- Extract reusable logic into composables
+- Name composables with the `use` prefix (e.g., `useTickets`)
+- Keep composables focused on a single responsibility
+- Return only the necessary values from composables
+- Document the purpose and usage of composables
+
+## State Management
+
+- Use Pinia for state management in new features
+- Organize stores by feature
+- Keep stores small and focused
+- Use getters for derived state
+- Use actions for side effects and mutations
+
+## Forms
+
+- Use vee-validate or similar for form validation
+- Separate form logic into dedicated composables
+- Handle form submission in a consistent way
+- Provide clear feedback for form errors
+- Support both keyboard and mouse interaction

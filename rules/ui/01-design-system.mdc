@@ -1,0 +1,50 @@
+# Design System Guidelines
+
+## Design Tokens
+
+- Use the project's design tokens for colors, spacing, typography, etc.
+- Avoid hardcoding values that should come from the design system
+- Use CSS variables for dynamic values
+- Maintain consistency across components
+
+## Colors
+
+- Use Tailwind color classes
+- Follow the color palette defined in the design system
+- Ensure sufficient contrast for accessibility
+- Use semantic color variables (e.g., `primary`, `danger`) instead of direct color values
+
+## Typography
+
+- Use the typography scale defined in the design system
+- Use appropriate heading levels (h1-h6)
+- Maintain consistent text styles across components
+- Consider text overflow and truncation
+
+## Spacing
+
+- Use the spacing scale defined in the design system
+- Maintain consistent spacing between elements
+- Use appropriate margins and padding
+- Consider responsive spacing for different screen sizes
+
+## Icons
+
+- Use the trengo-icons library for all icons
+- Follow the naming convention for icons (e.g., `UserFill`, `ArrowTopRightLinear`)
+- Use appropriate icon sizes based on context
+- Ensure icons are accessible with proper aria-labels
+
+## Component Variants
+
+- Create reusable variants for components (e.g., primary, secondary, danger)
+- Document variants in Storybook
+- Use consistent props for variants across components
+- Allow customization while maintaining design consistency
+
+## Responsive Design
+
+- Design components to work across all screen sizes
+- Use responsive props where appropriate
+- Test components at different viewport sizes
+- Consider touch targets for mobile devices

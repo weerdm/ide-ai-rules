@@ -1,0 +1,41 @@
+# Frontend General Guidelines
+
+## Code Organization
+
+- Use TypeScript for all new code
+- Follow the Vue 3 Composition API style for new components
+- Keep components focused on a single responsibility
+- Use the store directory for Pinia/Vuex state management
+- Place reusable functionality in composables
+- Use the util directory for utility functions
+
+## Directory Structure
+
+- Components should be placed in the `src/components` directory
+- Each feature should have its own directory under components
+- Shared/global components should be placed directly in components
+- Related components should be grouped in a `components` subdirectory with an index file for exports
+- Use feature-based organization for code that relates to specific features
+
+## File Naming
+
+- Use PascalCase for Vue component filenames (e.g., `MyComponent.vue`)
+- Use kebab-case for directory names (e.g., `my-feature/`)
+- Use camelCase for utility files, composables, and other non-component files
+- Use an index file to export multiple components from a directory
+
+## Imports
+
+- Prefer named imports over default imports
+- Group imports by type (external libraries first, then internal modules, then relative imports)
+- Use relative paths for imports within the same feature
+- Use absolute paths (@ alias) for imports across different features
+
+## Component Style
+
+- Use the script setup syntax with TypeScript for new components
+- Define props with type annotations and default values
+- Define emits with type annotations
+- Place template at the top, followed by script, then style
+- Use scoped styles for components unless global styles are needed
+- Prefer composition API over options API for new components

@@ -1,0 +1,57 @@
+# UI Component Guidelines
+
+## Component Naming
+
+- All component names should start with 'T' prefix (e.g., `TButton`, `TModal`)
+- Use PascalCase for component names
+- Atomic components should start with 'Atomic' prefix (e.g., `AtomicButton`, `AtomicToggle`)
+- Component directory names should match the component name
+
+## Component Structure
+
+- Each component should have its own directory
+- Component directories should include:
+  - The main component file
+  - Any related sub-components
+  - Tests
+  - Stories for Storybook
+- Components should be self-contained and not depend on application-specific state
+
+## Props
+
+- Props should have clear, descriptive names
+- All props should have type definitions
+- Use default values for optional props
+- Document props with comments explaining their purpose
+- Validate required props
+
+## Events
+
+- Define all events using the emits option
+- Use kebab-case for event names
+- Document events with comments explaining when they are emitted
+- Provide meaningful payloads for events
+
+## Styling
+
+- Use Tailwind CSS for styling components
+- Follow the project's design tokens for colors, spacing, etc.
+- Use CSS variables for theming
+- Components should be responsive by default
+- Use scoped styles to prevent leakage
+
+## Accessibility
+
+- All components should be accessible
+- Use semantic HTML elements
+- Add ARIA attributes where appropriate
+- Support keyboard navigation
+- Ensure sufficient color contrast
+- Test components with screen readers
+
+## Documentation
+
+- Document component usage in Storybook
+- Provide examples for common use cases
+- Document props, events, and slots
+- Include accessibility considerations in documentation

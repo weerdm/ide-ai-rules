@@ -1,0 +1,46 @@
+# AI Helpmate Modules Guidelines
+
+## Module Structure
+
+- Each feature should be organized as a module in the `src/modules` directory
+- Modules should be self-contained with their own components, composables, and types
+- Modules should only expose what's necessary to other modules
+- Follow a consistent directory structure within each module
+
+## Module Directory Structure
+
+```
+modules/
+  feature-name/
+    components/       # Module-specific components
+    composables/      # Module-specific composables
+    types/            # Module-specific types
+    constants.ts      # Module-specific constants
+    index.ts          # Public API of the module
+    routes.ts         # Module routes
+    store.ts          # Module state management
+```
+
+## Module Communication
+
+- Modules should communicate through:
+  - Stores (for state)
+  - Events (for actions)
+  - Props/emits (for components)
+- Avoid direct imports between modules when possible
+- Use interfaces for contract-based integration
+
+## Module Registration
+
+- Modules should be registered in the main application
+- Module routes should be registered in the router
+- Module stores should be registered with Pinia
+- Export public components, composables, and types through the module's index.ts
+
+## Module Development
+
+- Develop modules in isolation when possible
+- Write tests for module functionality
+- Document the module's public API
+- Keep modules focused on specific features
+- Consider module dependencies carefully

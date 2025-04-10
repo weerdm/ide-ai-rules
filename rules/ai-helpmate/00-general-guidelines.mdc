@@ -1,0 +1,59 @@
+# AI Helpmate Frontend Guidelines
+
+## Project Structure
+
+- Follow the Vue 3 project structure with TypeScript
+- Organize code by feature in the `src/modules` directory
+- Place shared components in the `src/components` directory
+- Use the `src/composables` directory for reusable logic
+- Place API calls in the `src/api` directory
+- Use the `src/stores` directory for Pinia state management
+- Place types in the `src/types` directory
+- Keep router configuration in the `src/router` directory
+
+## Component Organization
+
+- Group related components together
+- Use Vue 3 Composition API with `<script setup lang="ts">`
+- Follow single-responsibility principle for components
+- Extract reusable logic into composables
+- Use the `defineProps` and `defineEmits` macros for type safety
+
+## Styling
+
+- Use Tailwind CSS for styling
+- Follow the design system from the UI library
+- Use utility classes over custom CSS where possible
+- Use the `trengo-ui` components for common UI elements
+- Keep styles scoped to components unless global styles are necessary
+
+## State Management
+
+- Use Pinia for state management
+- Organize stores by feature
+- Keep stores small and focused
+- Use composables to access store functionality
+- Handle side effects in store actions
+
+## Testing
+
+- Write unit tests for components and composables
+- Use Vitest for unit testing
+- Place tests in the `src/tests` directory or alongside the files they test
+- Use the testing utilities provided by Vue
+- Mock API calls and external dependencies
+
+## Internationalization
+
+- Use Vue I18n for translations
+- Keep translation keys in the `src/locales` directory
+- Use translation keys instead of hardcoded strings
+- Support right-to-left (RTL) languages
+
+## Performance
+
+- Lazy load components when appropriate
+- Optimize network requests
+- Use pagination for large datasets
+- Implement proper caching strategies
+- Minimize bundle size through code splitting
