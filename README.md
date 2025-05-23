@@ -8,6 +8,8 @@
 
 This repository contains standardized rules to improve code generation and maintain consistency across Trengo repositories. These rules help teams follow best practices and reduce errors when developing with modern tooling and AI assistance.
 
+> This repository also provides rules formatted for Cursor, allowing teams using Cursor to benefit from the same standards in an automated way.
+
 ## 🗂️ Repository Structure
 
 ```
@@ -17,6 +19,8 @@ This repository contains standardized rules to improve code generation and maint
     ui/                 # Rules for the UI components library
     icons/              # Rules for the icons library
     ai-helpmate/        # Rules for the AI helpmate frontend
+  cursor-rules/
+    frontend/           # Cursor-formatted rules for the main frontend repository
   README.md             # This file
 ```
 
@@ -49,6 +53,20 @@ This repository contains standardized rules to improve code generation and maint
 | ---------------------------------------------------------------------- | ------------------------------------------------------ |
 | [📋 General Guidelines](./rules/ai-helpmate/00-general-guidelines.mdc) | Project structure, component organization, and testing |
 | [📦 Modules Structure](./rules/ai-helpmate/01-modules.mdc)             | Module organization, communication, and registration   |
+
+## 🖱️ Cursor Rules
+
+These rules are formatted for use with Cursor and follow Cursor's standards for rule definition and automation.
+
+> **Note:** The rules in `cursor-rules/frontend` are the same as those in `rules/frontend`, but are reformatted to meet Cursor's standards for rule definition and automation. This ensures consistency while enabling automated rule enforcement in Cursor.
+
+### 🖱️ Frontend Rules (Cursor)
+
+| 📄 Rule File                                                                 | 📝 Description                                                                 |
+| ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| [📌 General Guidelines](./cursor-rules/frontend/general.mdc)                 | Patterns and rules for code organization, file structure, and import practices |
+| [🧩 Component Patterns](./cursor-rules/frontend/component-patterns.mdc)      | Best practices for components, props, emits, composables, and forms           |
+| [⚡ Performance Guidelines](./cursor-rules/frontend/perfromance.mdc)          | Performance tips for components, rendering, async ops, and asset optimization |
 
 ## 🚀 How to Use These Rules
 

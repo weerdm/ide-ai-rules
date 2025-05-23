@@ -1,0 +1,85 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+### Pattern
+
+src/**/*.{ts,vue}
+
+### Rule
+
+Use TypeScript for all new code. Prefer the Vue 3 Composition API and `<script setup>` syntax. Keep components focused on a single responsibility.
+
+---
+
+### Pattern
+
+src/store/**/*.ts
+
+### Rule
+
+Use the `store/` directory for all Pinia or Vuex state logic. Keep state, actions, and getters in clearly separated files where appropriate.
+
+---
+
+### Pattern
+
+src/composables/**/*.ts
+
+### Rule
+
+Reusable logic should be placed in the `composables/` directory. Use camelCase filenames and return composables as functions.
+
+---
+
+### Pattern
+
+src/utils/**/*.ts
+
+### Rule
+
+Utility functions go in the `util/` directory. Files should be named using camelCase. Each function should be pure and reusable.
+
+---
+
+### Pattern
+
+src/components/**/*.vue
+
+### Rule
+
+Vue component filenames should use PascalCase (e.g., `MyComponent.vue`). Use `<script setup lang="ts">`. Structure component files with template at the top, script in the middle, style at the bottom. Use scoped styles by default.
+
+---
+
+### Pattern
+
+src/components/**/index.ts
+
+### Rule
+
+Use an `index.ts` file to export multiple components within the same directory. Group related components in a feature-specific folder.
+
+---
+
+### Pattern
+
+src/**/*.{ts,vue}
+
+### Rule
+
+Follow import best practices:
+- Use named imports over default imports.
+- Order imports: external libraries, internal modules, then relative imports.
+- Use relative imports within the same feature, and `@/` for cross-feature imports.
+
+---
+
+### Pattern
+
+src/components/**
+
+### Rule
+
+Use feature-based folder organization. Shared or global components should go directly under `src/components/`. Feature-specific components should be in subfolders like `src/components/my-feature/`.

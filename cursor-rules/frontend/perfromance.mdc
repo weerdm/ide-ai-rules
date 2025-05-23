@@ -1,0 +1,72 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+### Pattern
+
+src/components/**/*.vue
+
+### Rule
+
+Use `v-show` instead of `v-if` for elements that toggle frequently. Prefer computed properties over methods for derived values. Use `shallowRef` for large non-reactive objects. Avoid unnecessary watchers. For simple, stateless components, use functional components.
+
+---
+
+### Pattern
+
+src/components/**/*.vue
+
+### Rule
+
+Optimize rendering performance by:
+- Using unique and stable keys in `v-for` loops
+- Avoiding expensive computations inside computed properties
+- Applying `v-once` for static content
+- Lazy loading components when possible
+- Using `<Suspense>` for async components
+
+---
+
+### Pattern
+
+src/**/*.{ts,vue}
+
+### Rule
+
+Handle async operations efficiently:
+- Prefer `async/await` over raw Promises
+- Manage loading and error states in UI
+- Debounce or throttle event handlers to reduce performance impact
+- Cancel or avoid redundant API requests
+
+---
+
+### Pattern
+
+src/router/**/*.ts
+
+### Rule
+
+Lazy load routes using dynamic `import()` to reduce initial bundle size. Avoid loading unnecessary modules at startup.
+
+---
+
+### Pattern
+
+src/**/*.{ts,vue}
+
+### Rule
+
+Use dynamic imports for large dependencies. Import only what you use from third-party libraries to benefit from tree-shaking and avoid unnecessary bundle bloat.
+
+---
+
+### Pattern
+
+public/**/*.{png,jpg,jpeg,webp,svg}
+src/assets/**/*.{png,jpg,jpeg,webp,svg}
+
+### Rule
+
+Optimize images before use. Prefer WebP format where supported. Set proper `width` and `height` attributes on images for layout stability. Use lazy loading for images. Favor SVG for icons. Consider a CDN for serving static assets.
