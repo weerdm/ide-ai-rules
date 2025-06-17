@@ -4,6 +4,11 @@ globs:
 alwaysApply: false
 ---
 ---
+description: 
+globs: 
+alwaysApply: false
+---
+---
 description: "Performance optimization rules for Vue components and frontend assets"
 globs: ["src/**/*.{ts,vue}", "src/components/**/*.vue", "src/router/**/*.ts", "public/**/*.{png,jpg,jpeg,webp,svg}", "src/assets/**/*.{png,jpg,jpeg,webp,svg}"]
 alwaysApply: true
