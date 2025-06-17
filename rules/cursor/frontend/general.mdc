@@ -3,6 +3,19 @@ description:
 globs: 
 alwaysApply: false
 ---
+---
+description: "Core frontend development patterns covering TypeScript usage, Vue.js best practices, project structure, and code organization. These patterns establish fundamental guidelines for file naming, component structure, state management, and module organization to ensure consistent and maintainable frontend development."
+globs:
+  - "src/**/*.{ts,vue}"
+  - "src/store/**/*.ts"
+  - "src/composables/**/*.ts"
+  - "src/utils/**/*.ts"
+  - "src/components/**/*.vue"
+  - "src/components/**/index.ts"
+  - "src/components/**"
+alwaysApply: true
+---
+
 ### Pattern: General TypeScript and Composition API Usage
 src/**/*.{ts,vue}
 
