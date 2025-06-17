@@ -1,0 +1,54 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: "Performance optimization rules for Vue components and frontend assets"
+globs: ["src/**/*.{ts,vue}", "src/components/**/*.vue", "src/router/**/*.ts", "public/**/*.{png,jpg,jpeg,webp,svg}", "src/assets/**/*.{png,jpg,jpeg,webp,svg}"]
+alwaysApply: true
+---
+
+### Pattern: Component Optimization
+src/components/**/*.vue
+
+### Rule
+Use `v-show` instead of `v-if` for elements that toggle frequently. Prefer computed properties over methods for derived values. Use `shallowRef` for large non-reactive objects. Avoid unnecessary watchers. For simple, stateless components, use functional components.
+
+### Pattern: Rendering Performance
+src/components/**/*.vue
+
+### Rule
+- Use unique and stable keys in `v-for` loops
+- Avoid expensive computations inside computed properties
+- Apply `v-once` for static content
+- Lazy load components when possible
+
+### Pattern: Async Operations
+src/**/*.{ts,vue}
+
+### Rule
+Handle async operations efficiently:
+- Prefer `async/await` over raw Promises
+- Manage loading and error states in UI
+- Debounce or throttle event handlers to reduce performance impact
+- Cancel or avoid redundant API requests
+
+### Pattern: Route Loading
+src/router/**/*.ts
+
+### Rule
+Lazy load routes using dynamic `import()` to reduce initial bundle size. Avoid loading unnecessary modules at startup.
+
+### Pattern: Dependency Management
+src/**/*.{ts,vue}
+
+### Rule
+Use dynamic imports for large dependencies. Import only what you use from third-party libraries to benefit from tree-shaking and avoid unnecessary bundle bloat.
+
+### Pattern: Asset Optimization
+public/**/*.{png,jpg,jpeg,webp,svg}
+src/assets/**/*.{png,jpg,jpeg,webp,svg}
+
+### Rule
+Optimize images before use. Prefer WebP format where supported. Set proper `width` and `height` attributes on images for layout stability. Use lazy loading for images. Favor SVG for icons. Consider a CDN for serving static assets.
