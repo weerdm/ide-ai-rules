@@ -1,3 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
 # Performance Guidelines
 
 ## Component Optimization
@@ -14,7 +19,6 @@
 - Avoid expensive operations in computed properties
 - Consider using `v-once` for static content
 - Lazy load components when appropriate
-- Use Suspense for async components
 
 ## Async Operations
 

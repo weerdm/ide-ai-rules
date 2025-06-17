@@ -3,60 +3,38 @@ description:
 globs: 
 alwaysApply: false
 ---
-### Pattern
-
+### Pattern: Component Structure
 src/components/**/*.vue
 
 ### Rule
-
 Components should follow the Single Responsibility Principle. Break large components into smaller ones. Use props and emits for communication — avoid accessing `$parent` or `$children`. Use slots for content injection when appropriate.
 
----
-
-### Pattern
-
+### Pattern: Prop Definitions
 src/components/**/*.vue
 
 ### Rule
-
 All props must have TypeScript type definitions. Use default values for optional props. Document complex props with comments. Use camelCase for prop names in the script section and kebab-case when used in the template.
 
----
-
-### Pattern
-
+### Pattern: Event Emission
 src/components/**/*.vue
 
 ### Rule
-
 Define emits with proper types. Use kebab-case for event names. Avoid using the global event bus for communication.
 
----
-
-### Pattern
-
+### Pattern: Composables Naming and Usage
 src/composables/use*.ts
 
 ### Rule
-
 Extract reusable logic into composables. Name each composable with the `use` prefix (e.g., `useTickets`). Composables should follow the Single Responsibility Principle and return only necessary values. Document their purpose and usage.
 
----
-
-### Pattern
-
+### Pattern: State Management
 src/store/**/*.ts
 
 ### Rule
-
 Use Pinia for state management in new features. Organize stores by feature. Keep each store small and focused. Use getters for derived state and actions for side effects or mutations.
 
----
-
-### Pattern
-
+### Pattern: Form Validation
 src/components/forms/**/*.vue
 
 ### Rule
-
 Use `vee-validate` or a similar library for form validation. Separate form logic into dedicated composables. Handle form submission consistently. Provide user-friendly error feedback. Ensure support for both keyboard and mouse interactions.
