@@ -13,46 +13,47 @@ This repository contains standardized rules to improve code generation and maint
 ## 🗂️ Repository Structure
 
 ```
-.rules/
-  rules/
+rules/
+  general/              # General rules for all repositories
     frontend/           # Rules for the main frontend repository
     ui/                 # Rules for the UI components library
-    icons/              # Rules for the icons library
-    ai-helpmate/        # Rules for the AI helpmate frontend
-  cursor-rules/
-    frontend/           # Cursor-formatted rules for the main frontend repository
-  README.md             # This file
+    icons/             # Rules for the icons library
+    ai-helpmate/       # Rules for the AI helpmate frontend
+  cursor/              # Cursor-specific rule formats
+    frontend/          # Cursor-formatted frontend rules
+    README.md          # Cursor rules documentation
+README.md              # This file
 ```
 
 ## 🔍 All Rules
 
 ### 🌐 Frontend Rules
 
-| 📄 Rule File                                                        | 📝 Description                                                            |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| [📌 General Guidelines](./rules/frontend/00-general.mdc)            | Code organization, directory structure, file naming, and component styles |
-| [🧩 Component Patterns](./rules/frontend/01-component-patterns.mdc) | Best practices for components, props, events, and state management        |
-| [⚡ Performance Guidelines](./rules/frontend/02-performance.mdc)    | Optimization tips for components, rendering, and bundle size              |
+| 📄 Rule File                                                                | 📝 Description                                                            |
+| --------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| [📌 General Guidelines](./rules/general/frontend/general.mdc)               | Code organization, directory structure, file naming, and component styles |
+| [🧩 Component Patterns](./rules/general/frontend/component-patterns.mdc)    | Best practices for components, props, events, and state management        |
+| [⚡ Performance Guidelines](./rules/general/frontend/performance.mdc)       | Optimization tips for components, rendering, and bundle size              |
 
 ### 🎨 UI Rules
 
-| 📄 Rule File                                                      | 📝 Description                                                |
-| ----------------------------------------------------------------- | ------------------------------------------------------------- |
-| [🧱 Component Guidelines](./rules/ui/00-component-guidelines.mdc) | Standards for UI components, accessibility, and documentation |
-| [🎭 Design System](./rules/ui/01-design-system.mdc)               | Guidelines for colors, typography, spacing, and more          |
+| 📄 Rule File                                                              | 📝 Description                                                |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| [🧱 Component Guidelines](./rules/general/ui/component-guidelines.mdc)    | Standards for UI components, accessibility, and documentation |
+| [🎭 Design System](./rules/general/ui/design-system.mdc)                  | Guidelines for colors, typography, spacing, and more          |
 
 ### 🔣 Icons Rules
 
-| 📄 Rule File                                               | 📝 Description                                            |
-| ---------------------------------------------------------- | --------------------------------------------------------- |
-| [🖼️ Icon Guidelines](./rules/icons/00-icon-guidelines.mdc) | Structure, naming conventions, and optimization for icons |
+| 📄 Rule File                                                       | 📝 Description                                            |
+| ------------------------------------------------------------------ | --------------------------------------------------------- |
+| [🖼️ Icon Guidelines](./rules/general/icons/icon-guidelines.mdc)    | Structure, naming conventions, and optimization for icons |
 
 ### 🤖 AI Helpmate Rules
 
-| 📄 Rule File                                                           | 📝 Description                                         |
-| ---------------------------------------------------------------------- | ------------------------------------------------------ |
-| [📋 General Guidelines](./rules/ai-helpmate/00-general-guidelines.mdc) | Project structure, component organization, and testing |
-| [📦 Modules Structure](./rules/ai-helpmate/01-modules.mdc)             | Module organization, communication, and registration   |
+| 📄 Rule File                                                                   | 📝 Description                                         |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------ |
+| [📋 General Guidelines](./rules/general/ai-helpmate/general-guidelines.mdc)    | Project structure, component organization, and testing |
+| [📦 Modules Structure](./rules/general/ai-helpmate/modules.mdc)                | Module organization, communication, and registration   |
 
 ## 🚀 How to Use These Rules
 
@@ -60,7 +61,7 @@ This repository contains standardized rules to improve code generation and maint
 
 Many modern IDEs and editors can integrate with these standardized rules:
 
-1. 📥 Configure your IDE to recognize the `.rules` directory
+1. 📥 Configure your IDE to recognize the rules directory
 2. 🔄 Some IDEs can automatically apply these standards during development
 3. 💻 AI coding assistants can be configured to follow these guidelines
 
