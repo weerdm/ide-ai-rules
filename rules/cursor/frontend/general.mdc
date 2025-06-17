@@ -1,9 +1,4 @@
 ---
-description: 
-globs: 
-alwaysApply: false
----
----
 description: "Core frontend development patterns covering TypeScript usage, Vue.js best practices, project structure, and code organization. These patterns establish fundamental guidelines for file naming, component structure, state management, and module organization to ensure consistent and maintainable frontend development."
 globs:
   - "src/**/*.{ts,vue}"

@@ -1,9 +1,4 @@
 ---
-description: 
-globs: 
-alwaysApply: false
----
----
 description: "A collection of Vue.js component patterns and best practices focusing on component structure, props, events, composables, state management, and form handling. These rules ensure consistent, maintainable, and type-safe component development."
 globs: 
   - "src/components/**/*.vue"
