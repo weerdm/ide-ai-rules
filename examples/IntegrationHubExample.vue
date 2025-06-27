@@ -3,26 +3,26 @@
   <div class="integration-hub">
     <h2 class="text-2xl font-bold mb-4">Integration Settings - BEFORE (Problematic)</h2>
     
-    <!-- This input has mb-6 class causing top alignment -->
-    <div class="form-section">
+    <!-- FIXED: Container has mb-6, input does not -->
+    <div class="form-section mb-6">
       <label class="block text-sm font-medium text-gray-700 mb-2">
-        Webshop Domain (PROBLEMATIC - mb-6 on input)
+        Webshop Domain (FIXED - mb-6 on container)
       </label>
       <input 
-        class="mb-6 w-full h-full grow input#url.h-full.grow.w-full px-3 py-2 border border-gray-300 rounded-md"
+        class="w-full h-full grow input#url.h-full.grow.w-full px-3 py-2 border border-gray-300 rounded-md"
         name="webshop_domain"
         placeholder="Your shop domain (without https://)."
         type="text"
       />
     </div>
 
-    <!-- Another problematic input -->
-    <div class="form-section">
+    <!-- Another fixed input -->
+    <div class="form-section mb-6">
       <label class="block text-sm font-medium text-gray-700 mb-2">
-        API Key (PROBLEMATIC - mb-6 on input)
+        API Key (FIXED - mb-6 on container)
       </label>
       <input 
-        class="mb-6 w-full px-3 py-2 border border-gray-300 rounded-md"
+        class="w-full px-3 py-2 border border-gray-300 rounded-md"
         name="api_key"
         placeholder="Enter your API key"
         type="password"
