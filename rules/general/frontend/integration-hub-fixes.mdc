@@ -1,0 +1,82 @@
+# Integration Hub CSS Fixes
+
+## Input Styling Issues
+
+### Problem: Unwanted Margin on Input Elements
+
+**Issue**: Input elements in the integration hub have an `mb-6` class applied, causing unwanted margin-bottom spacing (24px) that makes inputs align improperly.
+
+**Root Cause**: The `mb-6` Tailwind CSS class is being applied to input elements, adding 24px of bottom margin that creates visual spacing issues.
+
+### Solution
+
+#### 1. Remove `mb-6` from Input Elements
+
+```css
+/* Remove margin-bottom from input elements in integration hub */
+.integration-hub input,
+.integration-hub .input-field {
+  margin-bottom: 0 !important;
+}
+
+/* Or if using Tailwind, replace mb-6 with mb-0 */
+```
+
+#### 2. Apply Proper Spacing to Form Groups
+
+Instead of applying margin to inputs directly, apply spacing to form groups or containers:
+
+```css
+/* Apply spacing to form groups instead of inputs */
+.integration-hub .form-group {
+  margin-bottom: 1.5rem; /* 24px equivalent */
+}
+
+.integration-hub .form-group:last-child {
+  margin-bottom: 0;
+}
+```
+
+#### 3. Tailwind Class Replacements
+
+If using Tailwind CSS classes directly in templates:
+
+```html
+<!-- WRONG: Margin on input -->
+<input class="mb-6 input-field" />
+
+<!-- CORRECT: Margin on container -->
+<div class="mb-6">
+  <input class="input-field" />
+</div>
+```
+
+### Implementation Steps
+
+1. **Locate Integration Hub Components**: Find all input components in the integration hub
+2. **Remove Direct Input Margins**: Remove `mb-6` classes from `<input>` elements
+3. **Apply Container Spacing**: Add proper spacing to form containers or wrapper divs
+4. **Test Visual Alignment**: Verify that inputs align properly without unwanted top spacing
+
+### Files to Check
+
+- Integration hub form components
+- Input component styles
+- Form layout styles
+- Any CSS files that might be applying global input styles
+
+### CSS Selector Priorities
+
+```css
+/* Specific selector to override global styles */
+.integration-hub form input {
+  margin-bottom: 0;
+}
+
+/* For form groups */
+.integration-hub .form-field {
+  margin-bottom: 1.5rem;
+}
+```
+
+This ensures that the integration hub inputs don't inherit unwanted margin styles from global CSS rules.

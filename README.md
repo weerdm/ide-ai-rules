@@ -34,6 +34,7 @@ README.md              # This file
 | [📌 General Guidelines](./rules/general/frontend/general.mdc)               | Code organization, directory structure, file naming, and component styles |
 | [🧩 Component Patterns](./rules/general/frontend/component-patterns.mdc)    | Best practices for components, props, events, and state management        |
 | [⚡ Performance Guidelines](./rules/general/frontend/performance.mdc)       | Optimization tips for components, rendering, and bundle size              |
+| [🔧 Integration Hub Fixes](./rules/general/frontend/integration-hub-fixes.mdc) | CSS fixes for integration hub input margin and alignment issues          |
 
 ### 🎨 UI Rules
 

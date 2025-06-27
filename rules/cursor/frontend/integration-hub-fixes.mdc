@@ -1,0 +1,57 @@
+# Integration Hub CSS Fixes - Cursor Rules
+
+## Quick Fix for Input Margin Issues
+
+When working on integration hub components, follow these patterns:
+
+### Input Element Guidelines
+
+```typescript
+// ❌ AVOID: Direct margin on input elements
+<input className="mb-6 w-full border rounded" />
+
+// ✅ PREFER: Wrap inputs in containers for spacing
+<div className="mb-6">
+  <input className="w-full border rounded" />
+</div>
+```
+
+### CSS Override Rules
+
+```css
+/* Apply this CSS to fix existing integration hub issues */
+.integration-hub input {
+  margin-bottom: 0 !important;
+}
+
+.integration-hub .form-field {
+  margin-bottom: 1.5rem;
+}
+```
+
+### Component Pattern
+
+```tsx
+// Recommended pattern for integration hub forms
+const IntegrationHubInput = ({ label, ...props }) => (
+  <div className="mb-6"> {/* Spacing on container */}
+    <label className="block text-sm font-medium mb-2">
+      {label}
+    </label>
+    <input 
+      className="w-full px-3 py-2 border rounded-md" // No margin classes
+      {...props} 
+    />
+  </div>
+);
+```
+
+### Quick Fix Commands
+
+1. Find all `mb-6` classes on input elements
+2. Move margin classes to parent containers
+3. Apply CSS override if needed immediately
+
+### Selector Priority
+
+Use specific selectors to ensure styles apply correctly in the integration hub context.
