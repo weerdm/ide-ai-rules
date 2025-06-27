@@ -1,0 +1,104 @@
+/* 
+ * Trengo Frontend - Integration Hub CSS Quick Fix
+ * 
+ * This CSS file fixes the input alignment issue in the integration hub
+ * where mb-6 classes on input elements cause unwanted top alignment.
+ * 
+ * Usage: Add this CSS to your main stylesheet or import it in your Vue app
+ */
+
+/* Integration Hub Input Alignment Fix */
+.integration-settings input,
+.plugin-settings input,
+[data-testid*="integration"] input,
+.integration-hub input,
+input[name="webshop_domain"],
+input[placeholder*="shop domain"],
+input[placeholder*="Your shop domain"] {
+  margin-bottom: 0 !important;
+}
+
+/* Apply proper spacing to form containers instead of inputs */
+.integration-settings .form-group,
+.integration-settings .field-wrapper,
+.plugin-settings .form-group,
+.plugin-settings .field-wrapper,
+.integration-hub .form-field,
+.integration-hub .form-group {
+  margin-bottom: 1.5rem; /* 24px - same as mb-6 */
+}
+
+/* Remove margin from last form elements */
+.integration-settings .form-group:last-child,
+.integration-settings .field-wrapper:last-child,
+.plugin-settings .form-group:last-child,
+.plugin-settings .field-wrapper:last-child,
+.integration-hub .form-field:last-child,
+.integration-hub .form-group:last-child {
+  margin-bottom: 0;
+}
+
+/* Specific overrides for common integration patterns */
+.integration-hub input.mb-6,
+.plugin-settings input.mb-6,
+.integration-settings input.mb-6 {
+  margin-bottom: 0 !important;
+}
+
+/* Ensure inputs are properly aligned in flex containers */
+.integration-hub .flex input,
+.plugin-settings .flex input,
+.integration-settings .flex input {
+  align-self: center;
+}
+
+/* Fix for form labels and inputs alignment */
+.integration-hub label + input,
+.plugin-settings label + input,
+.integration-settings label + input {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+/* Container spacing for integration forms */
+.integration-form > * + *,
+.plugin-form > * + *,
+.integration-settings-form > * + * {
+  margin-top: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .integration-settings .form-group,
+  .plugin-settings .form-group,
+  .integration-hub .form-field {
+    margin-bottom: 1rem; /* Smaller spacing on mobile */
+  }
+}
+
+/* Focus states should not be affected by margin fixes */
+.integration-hub input:focus,
+.plugin-settings input:focus,
+.integration-settings input:focus {
+  margin-bottom: 0 !important;
+  outline-offset: 2px;
+}
+
+/* Ensure proper spacing in grid layouts */
+.integration-hub .grid input,
+.plugin-settings .grid input,
+.integration-settings .grid input {
+  margin-bottom: 0;
+}
+
+.integration-hub .grid > div,
+.plugin-settings .grid > div,
+.integration-settings .grid > div {
+  margin-bottom: 1.5rem;
+}
+
+.integration-hub .grid > div:last-child,
+.plugin-settings .grid > div:last-child,
+.integration-settings .grid > div:last-child {
+  margin-bottom: 0;
+}
